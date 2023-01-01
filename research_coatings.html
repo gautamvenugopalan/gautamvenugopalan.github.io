@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Left Sidebar - Helios by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/images/slideshow.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script>
+			MathJax = {
+			  tex: {
+				inlineMath: [['$', '$'], ['\\(', '\\)']]
+			  }
+			};
+			</script>
+			<script id="MathJax-script" async
+			  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+			</script>
+	</head>
+	<body class="left-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1 a><a href="" id="logo" style="color:#ffffff; font-weight:600; background-color: #282828; opacity:0.9">Research interests and experience</a></h1 a>
+							</header>
+							<!-- <footer> -->
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav" style="color:#ffffff; font-weight:550; opacity:1">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li>
+									<a href="research.html">Research</a>
+									<ul>
+										<li><a href="research_LIGO.html">LIGO</a></li>
+										<li><a href="research_coatings.html">Optimal coating design</a></li>
+										<li><a href="research_optlev.html">Optical levitation</a></li>
+										<li><a href="research_mossbauer.html">Mössbauer spectroscopy</a></li>
+									</ul>
+								</li>
+								<li><a href="pubs.html">Publications</a></li>
+								<li><a href="bio.html">Bio</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style3">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-8 col-12-wide imp-mobile" id="content">
+								<article id="main">
+									<section>
+										<h2>Optimal dielectric coating design</h2>
+										<p>
+											Many precision measurement applications, such as telescope mirrors, lasers and optical cavities, require dielectric coatings that satisfy multiple design requirements. While the equations governing the reflectivity of multi-layer films are straightforward, algorithms to simultaneously satisfy multiple objectives are often only available through commercial software with expensive licensing fees. I developed a <code>python</code> based software suite that can efficiently evaluate optimal designs given multiple requirements. The algorithm was successfully applied it to several case-studies, and could be run on a modern laptop (without having to resort to a supercomputer cluster) for complex problems with up to $\mathcal{O(100)}$ dielectric layers.
+										</p>
+
+										<p>
+											An interesting extension of the technique was to the <em>inverse</em> problem - that is, the algorithm was efficiently able to compute the coating structure given a measurement of its spectral reflectivity. We successfully validated this on a moderately complex design, that of an Advanced LIGO mirror with 38 dielectric layers, for which the thickness of the individual layers was known. The algorithm successfully recovered these thicknesses to reasonable accuracy, again without having to rely on supercomputing resources.
+										</p>
+										<!-- Full-width images with number text -->
+										<div class="container2">
+											<div class="mySlides">
+									    		<div class="numbertext">1 / 4</div>
+									      		<img src="images/research/coatings/coatingFlow.png" style="width:100%; ">
+											</div>
+
+											<div class="mySlides">
+												<div class="numbertext">2 / 4</div>
+									      		<img src="images/research/coatings/aLIGO_ETM_cornerPlt_comparison.png" style="width:100%;">
+											</div>
+
+											<div class="mySlides">
+												<div class="numbertext">3 / 4</div>
+									      		<img src="images/research/coatings/inverseProblem.png" style="width:100%;">
+											</div>
+								  
+											<div class="mySlides">
+												<div class="numbertext">4 / 4</div>
+									      		<img src="images/research/coatings/ETMY.JPG" style="width:100%;">
+											</div>
+
+										
+								  
+									  	<!-- Next and previous buttons -->
+									  	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+									  	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+								  
+									  	<!-- Image text -->
+									  	<div class="caption-container">
+									    	<p id="caption"></p>
+									  	</div>
+								  
+									  	<!-- Thumbnail images -->
+									  	<div class="row">
+									    	<div class="columnImg">
+									      		<img class="demo cursor" src="images/research/coatings/coatingFlow.png" style="width:100%" onclick="currentSlide(1)" alt="Algorithm for computing dielectric coating structure given multiple design objectives.">
+									    	</div>
+									    	<div class="columnImg">
+									      		<img class="demo cursor" src="images/research/coatings/aLIGO_ETM_cornerPlt_comparison.png" style="width:100%" onclick="currentSlide(2)" alt="Markov Chain Monte-Carlo (MCMC) based tolerance analysis, demonstrating the superiority of our optimized solution (red) against the existing design (blue).">
+									    	</div>
+											<div class="columnImg">
+												<img class="demo cursor" src="images/research/coatings/inverseProblem.png" style="width:100%" onclick="currentSlide(3)" alt="Inferring the underlying layer structure given a measurement of the spectral reflectivity. At short wavelengths, the agreement between the inferred model and measurement degrades due to the limited availability of dispersion data.">
+											</div>
+									  		<div class="columnImg">
+												<img class="demo cursor" src="images/research/coatings/ETMY.JPG" style="width:100%" onclick="currentSlide(4)" alt="Image of a high-reflectvity LIGO optic. The coating is designed to be highly reflective for 1064 nm but transmissive for 532 nm, hence its semi-transparent, purplish appearance.">
+									  		</div>
+								  		</div>
+								  		
+
+									</section>
+								</article>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			<!-- Footer -->
+				<div id="footer" style="padding-top: 2em; padding-bottom: 2em">
+						<!-- Contact -->
+						<section class="contact">
+							<ul class="icons">
+								<li><a href="https://github.com/gautamvenugopalan" class="icon brands fa-github"><span class="label">Dribbble</span></a></li>
+								<!-- <li><a href="https://git.ligo.org/gautam.venugopalan" class="icon brands fa-gitlab"><span class="label">Dribbble</span></a></li> -->
+								<li><a href="mailto:gautamve@stanford.edu" class="fa fa-envelope"></a></li>
+								<li><a href="https://orcid.org/0000-0003-4414-9918" class="ai ai-orcid"></a></li>
+								<li><a href="https://scholar.google.com/citations?user=cTNLfGEAAAAJ&hl=en" class="ai ai-google-scholar "></a></li>
+								<li><a href="https://www.linkedin.com/in/gautam-venugopalan-01a38161/" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+							</ul>
+						</section>
+						<!-- Copyright -->
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy; 2022 Gautam Venugopalan. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/slideshow.js"></script>
+			<!-- <script src="assets/js/expandImage.js"></script> -->
+
+
+
+	</body>
+</html>
